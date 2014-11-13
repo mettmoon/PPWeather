@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B23" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Spot" representedClassName="PPWeather.Spot" syncable="YES">
+        <attribute name="altitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="weatherDay" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeatherDay" inverseName="spot" inverseEntity="WeatherDay" syncable="YES"/>
+    </entity>
+    <entity name="WeatherDay" representedClassName="PPWeather.WeatherDay" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sunrise" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sunset" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="spot" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Spot" inverseName="weatherDay" inverseEntity="Spot" syncable="YES"/>
+        <relationship name="weatherTime" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeatherTime" inverseName="weatherDay" inverseEntity="WeatherTime" syncable="YES"/>
+    </entity>
+    <entity name="WeatherTime" representedClassName="PPWeather.WeatherTime" syncable="YES">
+        <attribute name="cloudCoverHigh" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="cloudCoverLow" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="cloudCoverMid" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isotherm" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="precip" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="temperature" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="windDirection" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="windguruRating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="windGusts" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="windSpeed" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <relationship name="weatherDay" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WeatherDay" inverseName="weatherTime" inverseEntity="WeatherDay" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Spot" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="WeatherDay" positionX="-36" positionY="117" width="128" height="120"/>
+        <element name="WeatherTime" positionX="-54" positionY="-9" width="128" height="238"/>
+    </elements>
 </model>

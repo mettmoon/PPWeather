@@ -14,6 +14,9 @@
 		BCEB4AEC1A145FDA00C06F9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCEB4AEB1A145FDA00C06F9B /* Images.xcassets */; };
 		BCEB4AEF1A145FDA00C06F9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEB4AED1A145FDA00C06F9B /* LaunchScreen.xib */; };
 		BCEB4AFB1A145FDA00C06F9B /* PPWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB4AFA1A145FDA00C06F9B /* PPWeatherTests.swift */; };
+		BCEB4B0D1A14858700C06F9B /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB4B0C1A14858700C06F9B /* Spot.swift */; };
+		BCEB4B0F1A14858700C06F9B /* WeatherDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB4B0E1A14858700C06F9B /* WeatherDay.swift */; };
+		BCEB4B111A14858800C06F9B /* WeatherTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB4B101A14858800C06F9B /* WeatherTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		BCEB4AF41A145FDA00C06F9B /* PPWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PPWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCEB4AF91A145FDA00C06F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCEB4AFA1A145FDA00C06F9B /* PPWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPWeatherTests.swift; sourceTree = "<group>"; };
+		BCEB4B0C1A14858700C06F9B /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
+		BCEB4B0E1A14858700C06F9B /* WeatherDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDay.swift; sourceTree = "<group>"; };
+		BCEB4B101A14858800C06F9B /* WeatherTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,9 @@
 				BCEB4AEB1A145FDA00C06F9B /* Images.xcassets */,
 				BCEB4AED1A145FDA00C06F9B /* LaunchScreen.xib */,
 				BCEB4AE31A145FDA00C06F9B /* PPWeather.xcdatamodeld */,
+				BCEB4B101A14858800C06F9B /* WeatherTime.swift */,
+				BCEB4B0E1A14858700C06F9B /* WeatherDay.swift */,
+				BCEB4B0C1A14858700C06F9B /* Spot.swift */,
 				BCEB4ADF1A145FDA00C06F9B /* Supporting Files */,
 			);
 			path = PPWeather;
@@ -218,6 +227,9 @@
 				BCEB4AE71A145FDA00C06F9B /* ViewController.swift in Sources */,
 				BCEB4AE51A145FDA00C06F9B /* PPWeather.xcdatamodeld in Sources */,
 				BCEB4AE21A145FDA00C06F9B /* AppDelegate.swift in Sources */,
+				BCEB4B111A14858800C06F9B /* WeatherTime.swift in Sources */,
+				BCEB4B0D1A14858700C06F9B /* Spot.swift in Sources */,
+				BCEB4B0F1A14858700C06F9B /* WeatherDay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +357,7 @@
 				INFOPLIST_FILE = PPWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "87ebee9f-832c-4ee0-8703-b6f797522823";
 			};
 			name = Debug;
 		};
@@ -355,6 +368,7 @@
 				INFOPLIST_FILE = PPWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "87ebee9f-832c-4ee0-8703-b6f797522823";
 			};
 			name = Release;
 		};
